@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connectify</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .post-info {
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Connectify</h1>
+    <form action="/post" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <textarea name="message" placeholder="What's on your mind?" required></textarea>
+        <button type="submit">Post</button>
+    </form>
+    <hr>
+    <h2>Recent Posts</h2>
+    <ul>
+        {past posts }
+        <li>
+            <strong>{{ sunil }}</strong>:
+            prasuna, bhargav, rohit are my teammates
+          
+            <div class="post-info">{{ 12:12 }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
